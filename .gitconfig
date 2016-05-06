@@ -7,6 +7,8 @@
 [alias]
         s = status
         br = branch
+        co = checkout
+        cm = commit
 	oldest-ancestor = !bash -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
 	ssv = "log --no-merges --pretty=format:\"\\\"%h\\\";%an;%ai;%ct;\\\"%s\\\"\""
 	lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
